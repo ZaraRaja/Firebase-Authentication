@@ -3,6 +3,8 @@ import firebase from "firebase";
 import "firebase/firestore";
 import fire from "./fire";
 import NavBar from "./Navbar";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Login from "./Login";
 const firestore = firebase.firestore();
 
 export default class SignUp extends Component {
@@ -72,6 +74,7 @@ export default class SignUp extends Component {
     return (
       <div>
         <NavBar />
+   
         <form>
           <h3>Sign Up</h3>
 
@@ -124,9 +127,12 @@ export default class SignUp extends Component {
           >
             Sign Up
           </button>
-          <p className="forgot-password text-right">
-            Already registered <a href="/sign-in">sign in?</a>
-          </p>
+          {/* <p className="forgot-password text-right">
+            Already registered <span>Already registered?</span>
+          </p> */}
+          <Link to="/sign-in"> <p className="forgot-password text-right forget-pas">
+            Already Registered? Sign-in </p>
+           </Link>
         </form>
       </div>
     );

@@ -2,12 +2,12 @@ import firebase from 'firebase';
 import "firebase/auth";
 
 var firebaseConfig = {
-    apiKey: "AIzaSyBjwGMkDzFmrxxFCCo2UoQEvzJjFFmI0-g",
-    authDomain: "fir-authentication-60d46.firebaseapp.com",
-    projectId: "fir-authentication-60d46",
-    storageBucket: "fir-authentication-60d46.appspot.com",
-    messagingSenderId: "550108107523",
-    appId: "1:550108107523:web:11a7a4e8a650601612cf36"
+  apiKey: "AIzaSyA8Bmp0yKK1qTa8qiOQyMK7-V6CE6dYgYQ",
+  authDomain: "fir-auth-task.firebaseapp.com",
+  projectId: "fir-auth-task",
+  storageBucket: "fir-auth-task.appspot.com",
+  messagingSenderId: "448667120992",
+  appId: "1:448667120992:web:7356e4ca858d2c3a1ada05"
   };
   
   // Initialize Firebase

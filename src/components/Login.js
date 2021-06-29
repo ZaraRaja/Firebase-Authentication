@@ -3,7 +3,8 @@ import firebase from "firebase";
 import "firebase/firestore";
 import fire from "./fire";
 import NavBar from "./Navbar";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ForgetPassword from "./ForgetPass";
 const firestore = firebase.firestore();
 
 export default class Login extends Component {
@@ -63,7 +64,7 @@ export default class Login extends Component {
     });
     console.log("Email", this.state.email);
   }
-  
+
   handlePassword(e) {
     this.setState({
       password: e.target.value,
@@ -75,6 +76,7 @@ export default class Login extends Component {
     return (
       <div>
         <NavBar />
+    
 
         <form>
           <h3>Sign In</h3>
@@ -121,9 +123,9 @@ export default class Login extends Component {
           >
             Submit
           </button>
-          <p className="forgot-password text-right">
-            Forgot <a href="/forget">password?</a>
-          </p>
+         <Link to="/forget"> <p className="forgot-password text-right forget-pas">
+            Forgot password? </p>
+           </Link>
         </form>
       </div>
     );
